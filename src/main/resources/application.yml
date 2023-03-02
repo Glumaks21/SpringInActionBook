@@ -2,3 +2,15 @@ spring:
   datasource:
     generate-unique-name: false
     name: tacocloud
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            clientId: #
+            clientSecret: #
+            scope: email, public_profile

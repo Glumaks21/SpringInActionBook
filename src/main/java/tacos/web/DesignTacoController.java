@@ -1,6 +1,7 @@
 package tacos.web;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,17 +19,13 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Slf4j
+@AllArgsConstructor
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 
     private final IngredientRepository ingredientRepository;
-
-    @Autowired
-    public DesignTacoController(IngredientRepository ingredientRepository) {
-        this.ingredientRepository = ingredientRepository;
-    }
 
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
