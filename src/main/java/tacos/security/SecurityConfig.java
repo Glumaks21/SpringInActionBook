@@ -39,9 +39,6 @@ public class SecurityConfig {
                         .loginPage("/login")
                         .defaultSuccessUrl("/design")
                 )
-                .oauth2Login(oauth -> oauth
-                        .loginPage("/login")
-                )
                 .logout(logout -> logout
                         .logoutSuccessUrl("/")
                 )
