@@ -8,6 +8,8 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode(of = {"id"})
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Ingredient {
 
     @Id

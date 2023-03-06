@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.Date;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 @ToString(of = {"id", "name", "ingredients", "createdAt"})
 @EqualsAndHashCode(of = {"id"})
 @Entity
+@RestResource(rel = "tacos", path = "tacos")
 public class Taco {
 
     @Id
